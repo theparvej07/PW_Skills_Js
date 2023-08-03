@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Part 1</title>
+</head>
+
+<body>
+
+    <p id="one">Hello</p>
+    <!-- class -->
+    <ul>
+        <li class="tech">one</li>
+        <li class="tech">two</li>
+        <li class="tech">three</li>
+    </ul>
+    <!-- tagName -->
+    <h4> Hello</h4>
+    <h4> Hey</h4>
+    <h4> Hola</h4>
+
+    <!-- Query Selector -->
+    <h2>hello</h2>
+    <h2 class="class">hola</h2>
+    <h2 id="ids">hay</h2>
+
+    <script>
+        //id
+        let var1 = document.getElementById("one");
+        console.log(var1.innerText);
+
+        //class
+        let var2 = document.getElementsByClassName("tech");
+        console.log(var2[2].innerText);
+        var2[1].innerText = "Nodejs";
+
+        //tagName
+        let var3 = document.getElementsByTagName("h4");
+        console.log(var3[1].innerHTML);
+        var3[2].innerText = "hello Parvej";
+        var3[2].style.color = "red";
+
+        //Query selector
+        let var4 = document.querySelector(".class");
+        console.log(var4);
+        //var4.className = "hello";
+        // var4.classList = "hello helo hola";
+        var4.setAttribute("title", "parvej");
+    </script>
+
+</body>
+
+</html>
